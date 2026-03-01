@@ -1,0 +1,13 @@
+class Solution {
+public:
+    bool canJump(vector<int>& nums) {
+        int reach=nums.size()-1;
+        for(int i=reach;i>=0;i--){
+            if(i+nums[i]>=reach){
+                reach=i;
+            }
+        }
+    if (reach==0){return true;}
+    else{ return false;}
+    }
+};
